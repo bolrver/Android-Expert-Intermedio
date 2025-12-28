@@ -17,4 +17,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:background="@color/red"/>
 
+    <TextView
+        android:id="@+id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/ivDetail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/Title"
+        tools:text="JOJOOJO"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvBody"
+        tools:text="holui haslkdfhasoid hasdlkfhasdf slkahflkashdf ajlñkfjoiwefhaklds ahsdklfhskldjfh sdakjfhasjlk"
+        style="@style/Body"
+        android:layout_margin="24dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
