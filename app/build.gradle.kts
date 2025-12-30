@@ -22,13 +22,25 @@ android {
     }
 
     buildTypes {
-        release {
+        getByName("release") {
+            isDebuggable = false
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+
+            resValue("string", "daniename", "HoroscApp")
+
+            buildConfigField("String", "BASE_URL", "\"https://newastro.vercel.app/\"")
         }
+
+        getByName("debug"){
+            isDebuggable = true
+            buildConfigField("String", "BASE_URL", "\"https://newastro-debug.vercel.app/\"")
+            resValue("string", "daniename", "[DEBUG] HoroscApp")
+        }
+
     }
     kotlin {
         jvmToolchain(11)
@@ -39,6 +51,7 @@ android {
     }
     buildFeatures{
         viewBinding = true
+        buildConfig = true
     }
 }
 
@@ -64,6 +77,12 @@ dependencies {
 
     implementation("com.google.dagger:hilt-android:2.57.2")
     kapt("com.google.dagger:hilt-android-compiler:2.57.2")
+
+//    Retrofit
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2")
+
 
 
 }
