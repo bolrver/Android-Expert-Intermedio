@@ -18,7 +18,7 @@
         tools:visibility="gone">
 
         <ImageView
-            android:id="@+id/ivRulette"
+            android:id="@+id/ivRoulette"
             android:layout_width="0dp"
             android:layout_height="400dp"
             android:layout_marginBottom="-250dp"
@@ -59,8 +59,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_percent="0.6"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:background="@color/red" />
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <TextView
             android:id="@+id/tvLucky"
