@@ -63,8 +63,13 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)
+    testImplementation(libs.junit.jupiter)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    testImplementation("io.kotest:kotest-runner-junit5:5.1.0")
+    testImplementation("junit:junit:4.13.2")
+
+
 
 //            Camera X
     val cameraVersion = "1.5.2"
@@ -92,6 +97,9 @@ dependencies {
     implementation ("com.squareup.retrofit2:converter-gson:3.0.0")
     implementation ("com.squareup.okhttp3:logging-interceptor:5.3.2")
 
+//        Mock
+
+    testImplementation("io.mockk:mockk:1.13.5")
 
 
 }
