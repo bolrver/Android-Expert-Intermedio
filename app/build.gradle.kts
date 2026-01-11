@@ -18,7 +18,15 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "com.bolrver.horoscapp.CustomTestRunner"
+
+        packaging {
+            resources {
+                excludes += "/META-INF/{AL2.0,LGPL2.1,LICENSE.md,LICENSE-notice.md}"
+            }
+        }
+
+
     }
 
     buildTypes {
@@ -68,6 +76,12 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     testImplementation("io.kotest:kotest-runner-junit5:5.1.0")
     testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.espresso:espresso-contrib:3.7.0")
+    androidTestImplementation("androidx.test.espresso:espresso-intents:3.7.0")
+    androidTestImplementation("com.google.dagger:hilt-android-testing:2.57.2")
+    androidTestImplementation("androidx.fragment:fragment-testing:1.8.9")
+    androidTestImplementation(libs.junit.jupiter)
+    kaptAndroidTest("com.google.dagger:hilt-android-compiler:2.57.2")
 
 
 
